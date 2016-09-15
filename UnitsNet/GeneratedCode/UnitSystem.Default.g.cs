@@ -2219,6 +2219,11 @@ namespace UnitsNet
                                 new AbbreviationsForCulture("en-US", "ml"),
                                 new AbbreviationsForCulture("ru-RU", "мл"),
                             }),
+                        new CulturesForEnumValue((int) VolumeUnit.SquareYardInch,
+                            new[]
+                            {
+                                new AbbreviationsForCulture("en-US", "sqydin", "yd2in"),
+                            }),
                         new CulturesForEnumValue((int) VolumeUnit.Tablespoon,
                             new[]
                             {

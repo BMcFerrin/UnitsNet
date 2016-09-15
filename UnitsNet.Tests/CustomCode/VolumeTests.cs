@@ -63,6 +63,8 @@ namespace UnitsNet.Tests.CustomCode
 
         protected override double MillilitersInOneCubicMeter => 1E6;
 
+        protected override double SquareYardsInchInOneCubicMeter => 47.0862222576491;
+
         protected override double AuTablespoonsInOneCubicMeter => 50000;
 
         protected override double UsTablespoonsInOneCubicMeter => 67628.0454;

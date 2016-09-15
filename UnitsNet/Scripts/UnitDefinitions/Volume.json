@@ -423,7 +423,7 @@
         }
       ]
     },
-	{
+		{
       "SingularName": "Drum",
       "PluralName": "Drums",
       "FromUnitToBaseFunc": "x*0.20819765",
@@ -435,7 +435,7 @@
         }
       ]
     },
-	{
+		{
       "SingularName": "Tote",
       "PluralName": "Totes",
       "FromUnitToBaseFunc": "x*1.0409882",
@@ -444,6 +444,18 @@
         {
           "Culture": "en-US",
           "Abbreviations": [ ]
+        }
+      ]
+    },
+		{
+      "SingularName": "SquareYardInch",
+      "PluralName": "SquareYardsInch",
+      "FromUnitToBaseFunc": "x*0.0212376349609901",
+      "FromBaseToUnitFunc": "x/0.0212376349609901",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "sqydin", "yd2in" ]
         }
       ]
     }

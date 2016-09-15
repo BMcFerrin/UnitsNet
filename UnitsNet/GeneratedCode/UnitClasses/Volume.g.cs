@@ -270,6 +270,14 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Get Volume in SquareYardsInch.
+        /// </summary>
+        public double SquareYardsInch
+        {
+            get { return _cubicMeters/0.0212376349609901; }
+        }
+
+        /// <summary>
         ///     Get Volume in Tablespoons.
         /// </summary>
         [System.Obsolete("Deprecated due to github issue #134, please use UsTablespoon instead")]
@@ -534,6 +542,14 @@ namespace UnitsNet
         public static Volume FromMilliliters(double milliliters)
         {
             return new Volume((milliliters/1e3) * 1e-3d);
+        }
+
+        /// <summary>
+        ///     Get Volume from SquareYardsInch.
+        /// </summary>
+        public static Volume FromSquareYardsInch(double squareyardsinch)
+        {
+            return new Volume(squareyardsinch*0.0212376349609901);
         }
 
         /// <summary>
@@ -948,6 +964,21 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Get nullable Volume from nullable SquareYardsInch.
+        /// </summary>
+        public static Volume? FromSquareYardsInch(double? squareyardsinch)
+        {
+            if (squareyardsinch.HasValue)
+            {
+                return FromSquareYardsInch(squareyardsinch.Value);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
         ///     Get nullable Volume from nullable Tablespoons.
         /// </summary>
         public static Volume? FromTablespoons(double? tablespoons)
@@ -1153,6 +1184,8 @@ namespace UnitsNet
                     return FromMicroliters(val);
                 case VolumeUnit.Milliliter:
                     return FromMilliliters(val);
+                case VolumeUnit.SquareYardInch:
+                    return FromSquareYardsInch(val);
                 case VolumeUnit.Tablespoon:
                     return FromTablespoons(val);
                 case VolumeUnit.Teaspoon:
@@ -1238,6 +1271,8 @@ namespace UnitsNet
                     return FromMicroliters(value.Value);
                 case VolumeUnit.Milliliter:
                     return FromMilliliters(value.Value);
+                case VolumeUnit.SquareYardInch:
+                    return FromSquareYardsInch(value.Value);
                 case VolumeUnit.Tablespoon:
                     return FromTablespoons(value.Value);
                 case VolumeUnit.Teaspoon:
@@ -1456,6 +1491,8 @@ namespace UnitsNet
                     return Microliters;
                 case VolumeUnit.Milliliter:
                     return Milliliters;
+                case VolumeUnit.SquareYardInch:
+                    return SquareYardsInch;
                 case VolumeUnit.Tablespoon:
                     return Tablespoons;
                 case VolumeUnit.Teaspoon:
